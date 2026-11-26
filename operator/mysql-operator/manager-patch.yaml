@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: controller-manager
+  namespace: mysql-operator-system
+spec:
+  replicas: 0
+  template:
+    spec:
+      imagePullSecrets:
+        - name: harbor-mysql-operator-pull
+      containers:
+        - name: manager
+          image: 192.168.119.166:8443/mysql-operator/controller:pending
