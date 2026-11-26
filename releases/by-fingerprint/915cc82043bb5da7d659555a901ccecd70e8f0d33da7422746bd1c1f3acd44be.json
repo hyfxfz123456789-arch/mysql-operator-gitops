@@ -1,0 +1,7 @@
+{
+  "fingerprint": "915cc82043bb5da7d659555a901ccecd70e8f0d33da7422746bd1c1f3acd44be",
+  "sourceCommit": "f434df30005ebc279c44767e0e9e2235c42fe4ad",
+  "imageTag": "192.168.119.166:8443/mysql-operator/controller:17-f434df3",
+  "imageDigest": "sha256:e31caa746a7f2b719e861ce80fc7db7174691aeef5832916522b0dcccf9d4a61",
+  "bundleSha256": "1f9cf1b655d81b282e2f8440094093fd33fad526ff2d1c8b7662e44a2fd91a75"
+}

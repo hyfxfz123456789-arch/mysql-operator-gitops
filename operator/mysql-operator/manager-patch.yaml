@@ -11,4 +11,4 @@ spec:
         - name: harbor-mysql-operator-pull
       containers:
         - name: manager
-          image: 192.168.119.166:8443/mysql-operator/controller:pending
+          image: 192.168.119.166:8443/mysql-operator/controller@sha256:e31caa746a7f2b719e861ce80fc7db7174691aeef5832916522b0dcccf9d4a61

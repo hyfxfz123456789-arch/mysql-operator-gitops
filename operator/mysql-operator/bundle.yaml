@@ -454,6 +454,8 @@ subjects:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    mysql-operator.lab/bundle-render-check: "2026-11-07"
   labels:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name: mysql-operator

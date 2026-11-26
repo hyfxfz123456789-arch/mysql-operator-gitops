@@ -1,0 +1,32 @@
+apiVersion: apps.egonlin.com/v1
+kind: MysqlCluster
+metadata:
+  name: mysqlcluster-sample
+  namespace: mysql-lab
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=false
+  labels:
+    app.kubernetes.io/name: mysql-operator
+    app.kubernetes.io/managed-by: kustomize
+spec:
+  image: registry.cn-shanghai.aliyuncs.com/egon-k8s-test/mysql:5.7
+  replicas: 4
+  masterService: master-service
+  slaveService: slave-service
+  storage:
+    storageClassName: local-path
+    size: 1Gi
+  backup:
+    enabled: true
+    schedule: "0 2 * * *"
+    timeZone: Asia/Shanghai
+    storage:
+      storageClassName: local-path
+      size: 5Gi
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: "1"
+      memory: 2Gi
